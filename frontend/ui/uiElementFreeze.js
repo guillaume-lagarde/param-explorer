@@ -12,6 +12,8 @@ class UIElementFreeze extends UIElement
         this.cbChange       = null;
     }
 
+    setLabel(label){}
+
     createChk()
     {
         if (this.bShowFreeze)

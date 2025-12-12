@@ -30,6 +30,11 @@ class UISelectCheckbox extends UIElementFreeze
         this.child([this.label, this.container]);
     }
 
+    setLabel(label)
+    {
+        this.label.text(label);
+    }
+
     updateLayout()
     {
         this.selectValue.val( this.parameter['obj'][this.name] );

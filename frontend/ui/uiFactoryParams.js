@@ -26,6 +26,9 @@ function uiCreateControl(name, param, cbChange, opts={})
         if (isFunction(cbChange))
             uiControl.change( (name,val)=>cbChange(name,val) );
 
+        if ('label' in param)
+            uiControl.setLabel(param.label);
+
         if (__UI_FACTORY_PARAMS_LOG__)
             console.log(`uiCreateControlsFromParamsExplorer(), adding ${name}`, param);
         return uiControl;

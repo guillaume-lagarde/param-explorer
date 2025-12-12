@@ -6,6 +6,7 @@ class UISliderCheckbox extends UIElementFreeze
         this.addClass('slider-chk');
 
         this.name       = name;
+        this.labelName  = name;
         this.parameter  = parameter;
 
         // Create controls
@@ -35,10 +36,16 @@ class UISliderCheckbox extends UIElementFreeze
         this.updateLayout();
     }
 
+    setLabel(label)
+    {
+        this.labelName = label;
+        this.label.text(label);
+    }
+
     updateSliderLabel(val)
     {
         let valstr = this.parameter.type == 'integer' ? Math.floor(val) : nf(val,0,this.sliderValue.floatPrecision);
-        this.label.text(`${this.name}&nbsp;&nbsp;<span class="slider-label-value">${valstr}</span>`);
+        this.label.text(`${this.labelName}&nbsp;&nbsp;<span class="slider-label-value">${valstr}</span>`);
     }
 
     updateLayout()
