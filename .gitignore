@@ -1,0 +1,14 @@
+# Data
+backend/data/images/
+
+# environnement virtuel
+*.venv
+*.env
+*.pyc
+
+
+*.DS_Store
+*.jpg
+!images/*.jpg
+*.json
+*__pycache__*/
