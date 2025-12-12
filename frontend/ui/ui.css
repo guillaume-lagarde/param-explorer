@@ -1,0 +1,990 @@
+:root
+{
+      --margin-element : 5px;
+}
+
+input
+{
+      border-style: solid;
+}
+
+.flex
+{
+      display: flex;
+}
+
+.flex-gap
+{
+      gap : 5px;
+}
+
+.ui .w100
+{
+      width:      100%;
+}
+
+.ui a
+{
+      color: white;
+}
+
+.ui .btn-2c-left,
+.ui .btn-2c-right
+{
+      flex : 1;
+      box-sizing: border-box;
+}
+
+.ui .btn-2c-left
+{
+      margin-right: 2.5px;
+}
+
+.ui .btn-2c-right
+{
+      margin-left: 2.5px;
+}
+
+.ui .mb
+{
+      margin-bottom: var(--margin-element);
+}
+
+.underline
+{
+      border-bottom: 1px solid white;
+}
+
+/* 
+-------------- UI / MAIN CONTAINER
+*/
+
+#ui-main
+{
+      width:      320px;
+}
+
+.ui
+{
+      --font-family:                "Helvetica";
+      --slider-height:              20px;
+      --input-bg-color:             rgb(128,128,128);
+      --input-color:                rgb(255,255,255);
+      --input-bg-color-selected:    rgb(150,150,150);
+
+      font-family:      var(--font-family);
+      position :        fixed;
+      min-width:        300px;
+      top:              10px;
+}
+
+.ui.project
+{
+      left :            10px;
+}
+
+.ui.user
+{
+      right:            10px;
+      width:            340px;
+      max-height:       calc(100vh - 20px);
+      overflow-y:       scroll;
+}
+
+.ui h1,
+.ui h2
+{
+      margin-bottom:    8px;
+}
+
+.ui h2
+{
+      font-size:        20px;
+}
+
+.container-bg
+{
+      box-sizing:       border-box;
+      padding :         10px;
+      background-color: rgba(0,0,0,0.7);
+      border-radius:    4px;
+}
+
+.ui option
+{
+      font-family:      var(--font-family);
+}
+
+.ui select, 
+.ui button
+{
+      font-family:      var(--font-family);
+      width:            100%;
+}
+
+.ui .container
+{
+  margin-bottom:        var(--margin-element);
+}
+
+.ui .container:last-child
+{
+  margin-bottom:        0;
+}
+
+.ui .container.no-margin-bottom
+{
+      margin-bottom:    0;
+}
+
+
+
+.ui .container > label
+{
+      display:          block;
+      margin-bottom:    8px; 
+      font-size:        18px;
+      padding-bottom:   4px;
+      user-select:      none;
+}
+
+.ui .container > label.small,
+.ui .container p.small,
+.ui p.small
+{
+      font-size:        14px;
+}
+
+
+
+.ui .container > label.underline
+{
+  border-bottom: 1px solid white;
+}
+
+.ui .gui-container
+{
+    padding:            0 var(--margin-element) 0 var(--margin-element);
+}
+
+.ui .gui-container h2
+{
+  color:            white;
+  margin:           0;
+}
+
+.container select, 
+.container button
+{
+  font-size:            14px;
+  background-color:     var(--input-bg-color);
+  color:                var(--input-color);
+  outline:              none;
+  border-radius:        5px;
+  border:               none;
+  height:               28px;
+  transition: background-color 0.3s;
+}
+
+.container button.selected
+{
+      cursor:           auto;
+      background-color: rgb(150,150,150);
+}
+
+
+.container button:hover
+{
+      cursor:           pointer;
+      background-color: var(--input-bg-color-selected);
+}
+
+.container button:disabled,
+.container button[disabled]
+{
+  background-color: rgba(128,128,128,0.2);
+  color: grey;
+  cursor:auto;
+}
+
+
+
+.ui .control
+{
+      color: white;
+}
+
+.ui .gui-container .control,
+.ui .gui-container .control  label,
+.ui .gui-container .control  input,
+.ui .gui-container .control  textarea,
+.ui .gui-container select
+{
+      width:            100%;
+}
+
+/* 
+-------------- TEXT INPUTS
+*/
+
+.ui .text-input
+{
+      display : flex;
+      margin-bottom : var(--margin-element);
+}
+
+.ui .text-input label
+{
+      flex: 1;
+      padding-top: 4px;
+}
+
+.ui .text-input.two-columns > label
+{
+      flex: 1 56px;
+      margin-bottom: 4px;
+      display: block;
+      padding-top: 4px;
+}
+
+
+
+.ui input[type=text]
+{
+      font-family: var(--font-family);
+}
+
+.ui .text-input input[type=text],
+.ui textarea
+{
+      flex:             5;
+      height:           28px;
+      box-sizing:       border-box;
+      font-size:        14px;
+      outline:          none;
+      border:           none;
+      background-color: var(--input-bg-color);
+      color:            var(--input-color);
+      border-radius:    5px;      
+      padding:          3px;
+}
+
+
+/* 
+-------------- TEXT AREA
+*/
+
+.ui .text-area
+{
+      display : flex;
+      margin-bottom : var(--margin-element);
+      flex-direction: column;
+}
+
+.ui textarea
+{
+      font-family:      var(--font-family);
+      resize:           vertical;
+}
+
+
+/* 
+-------------- SLIDERS
+*/
+
+.ui .range-container
+{
+      position :              relative;
+      margin-bottom:          10px;
+}
+
+.ui .range-container:last-child
+{
+      margin-bottom:          0px;
+}
+
+.ui .range-container label
+{
+      display:                block;
+      margin-bottom:          var(--margin-element);
+}
+
+.ui input.slider[type=range]
+{
+      -webkit-appearance:     none;
+      overflow:               hidden;
+      outline:                none;
+      border:                 none;
+      border-radius:          15px;
+      background-color:      grey;
+      height:                 var(--slider-height);
+}
+
+.ui input.slider[type=range]:disabled
+{
+      background-color:      rgba(128,128,128,0.5);
+      cursor:                 not-allowed;
+}
+
+
+.ui input.slider[type=range]::-webkit-slider-thumb
+{
+      -webkit-appearance:     none;      
+      cursor:                 ew-resize;
+      width:                  var(--slider-height);
+      height:                 var(--slider-height);
+      color:                  white;
+
+      box-shadow:             inset 0 0 0 40px white;
+      border-radius:          50%;
+      transition:             box-shadow 0.2s ease-in-out;
+      position:               relative;      
+}
+
+.ui input.slider[type=range]:disabled::-webkit-slider-thumb
+{
+      box-shadow:             inset 0 0 0 40px rgba(255,255,255,0.2);
+      cursor:                 not-allowed;
+}
+
+
+.ui .lbl-slider-min,
+.ui .lbl-slider-max
+{
+      position:               relative;      
+      flex :                  0 22px;
+      font-size:              11px;
+      padding-top:            var(--margin-element);
+}
+
+.ui .lbl-slider-min
+{
+      padding-right :         var(--margin-element);
+      text-align:             left;
+}
+
+.ui .lbl-slider-max
+{
+      padding-left :  var(--margin-element);
+      text-align:             right;
+}
+
+.ui .slider-label-value
+{
+      font-size:              11px;
+      opacity:                0.9;  
+}
+
+.ui .slider
+{
+      flex : 1
+}
+
+.ui .range-container .bubble 
+{
+      font-size:        12px;
+      background:       black;
+      color:            white;
+      padding:          4px 12px;
+      position:         absolute;
+      border-radius:    4px;
+      left:             50%;
+      transform:        translateX(-50%);
+}
+
+.ui .range-container .bubble::after 
+{
+      background:       black;
+      content:          "";
+      position:         absolute;
+      width:            2px;
+      height:           2px;
+      top:              -1px;
+      left:             50%;
+}
+
+/* Columns mode */
+.ui .range-container.columns 
+{
+      display :          flex;
+      margin-bottom:     var(--margin-element);
+}
+
+.ui .range-container.columns > label
+{
+      flex:              1 50px;
+}
+
+.ui .range-container.columns .slider-bar
+{
+      flex:              5;
+}
+
+.ui .range-container.columns .lbl-slider-min,
+.ui .range-container.columns .lbl-slider-max
+{
+      flex:              0;
+}
+
+
+/* 
+-------------- SLIDERS : RANGE
+https://github.com/w3collective/price-range-slider
+*/
+
+.ui .flex-1
+{
+      flex:                   1;
+}
+
+.ui .range-slider 
+{
+      flex:                   1;
+      height:                 var(--slider-height);
+      position:               relative;
+      background-color:       var(--input-bg-color);
+      border-radius:          15px;
+}
+
+.ui .range label
+{
+      display:                block;
+      margin-bottom:          var(--margin-element);
+}
+
+
+.ui .range-selected 
+{
+      background-color:       rgb(50,50,50);
+      height:                 100%;
+      left:                   30%;
+      right:                  30%;
+      position:               absolute;
+}
+    
+.ui .range-input 
+{
+      position:               relative;
+}
+
+.ui .range-input input 
+{
+      -webkit-appearance:     none;
+      appearance:             none;
+      position:               absolute;
+      width:                  100%;
+      height:                 5px;
+      top:                    -14px;
+      background:             none;
+      pointer-events:         none;
+      border-style:           none;
+}
+
+.ui .range-input input::-webkit-slider-thumb 
+{
+      -webkit-appearance:     none;      
+      appearance:             none;
+      cursor:                 ew-resize;
+      height:                 var(--slider-height);
+      width:                  var(--slider-height);
+      border-radius:          50%;
+      background-color:       #fff;
+      pointer-events:         auto;
+}
+
+
+
+/* 
+-------------- CHECKBOXES
+https://alvarotrigo.com/blog/toggle-switch-css/
+*/
+
+.ui .checkbox-container
+{
+      display : flex;
+      align-items: center;
+}
+
+.ui .checkbox-container > label
+{
+      flex :      1 250px;
+}
+
+.ui .checkbox-container > .checkbox-control
+{
+      flex :      5;
+}
+
+
+.ui .checkbox-control input[type=checkbox]
+{
+      position : absolute;
+      top : 0;
+      height: 0;
+      width: 0;
+      visibility: hidden;
+}
+    
+.ui .checkbox-control label 
+{
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 50px;
+      height: 20px;
+      background: rgba(128,128,128,1.0);
+      display: block;
+      border-radius: 15px;
+      position: relative;
+}
+
+.ui .checkbox-control label.disabled
+{
+      background: rgba(128,128,128,0.2);
+      cursor:auto;
+
+}
+    
+.ui .checkbox-control label:after 
+{
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,1.0);
+      border-radius: 20px;
+      transition: 0.3s;
+}
+
+.ui .checkbox-control label.disabled:after
+{
+      background: rgba(255,255,255,0.2);
+}
+    
+.ui .checkbox-control input:checked + label 
+{
+      background: #bada55;
+}
+    
+.ui .checkbox-control input:checked + label:after 
+{
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+}
+    
+.ui .checkbox-control label:active:after 
+{
+      width: 20px;
+}
+
+/* 
+-------------- CHECKBOXES
+https://alvarotrigo.com/blog/toggle-switch-css/
+*/
+#container-windowSize
+{
+      font-family: "Kern-r";
+      position :  fixed;
+      font-size:  12px;
+      right:      10px;
+      bottom:     10px;
+}
+
+/* 
+-------------- SELECT
+*/
+
+.ui .select-control
+{
+      display : flex;
+}
+
+.ui .select-control > label
+{
+      flex: 1 50px;
+      margin-bottom: 4px;
+      display: block;
+      padding-top: 4px;
+}
+
+.ui .select-control > select
+{
+      flex: 5;
+      box-sizing: border-box;
+      padding: 3px;
+      margin-left:6px;
+}
+
+
+
+
+/* 
+-------------- CANVAS
+*/
+
+.ui .canvas-container
+{
+      position : relative;
+      margin-bottom:       10px;
+}
+
+.ui .canvas-container canvas
+{
+      width:                 250px;
+}
+
+.ui .canvas-container canvas
+{
+/*      margin-right:     auto;
+      margin-left:      auto;
+*/
+      margin-top:       var(--margin-element);
+}
+
+.ui .canvas-container
+{
+      user-select: none;
+}
+
+/* 
+-------------- CANVAS WITH LABEL
+*/
+.legend-image
+{
+      position:         absolute;
+      font-size:        10px;
+      bottom:           2px;
+      left:             2px;
+      padding:          var(--margin-element);
+      background-color: rgba(0,0,0,0.7);
+      border-radius:    4px;
+}
+
+/* 
+-------------- IMAGE WITH LABEL
+*/
+.container.image
+{
+      position:         relative;
+}
+
+.ui .container.image .legend-image
+{
+      bottom:           5px;
+      left:             2px;
+      font-size:        10px;
+      margin-bottom:    0;
+      padding-bottom:   0;
+      padding:          var(--margin-element);
+}
+
+
+/* 
+-------------- KEY VALUES
+*/
+
+.container.key-value
+{
+      display :         flex;
+      margin-bottom:    4px;
+}
+
+.container.key-value label
+{
+      margin-bottom:    0;
+      font-size:        16px;
+}
+
+
+.container.key-value .key 
+{
+      flex:            1 50px;
+}
+
+.container.key-value .value 
+{
+      flex:             5;
+      text-align:       right;
+}
+
+
+
+/*
+
+*/
+.color-picker-control label
+{
+      margin-right:      10px;
+}
+
+/* 
+-------------- PARAM
+*/
+/*
+.ui .container.param
+{
+      margin-bottom: 0;
+}
+*/
+
+.ui .container.param
+{
+      margin-bottom:    0;
+}
+
+.ui .container.param select
+{
+      font-size:        12px;
+      box-sizing:       border-box;
+      margin-left:      10px;
+}
+
+
+.ui .container.param .select-control
+{
+      flex:             1.5;
+}
+
+.ui .container.param label
+{
+/*      flex:            1 1 200px;
+*/
+      margin-right:    var(--margin-element);
+      font-size:       14px;
+      box-sizing:      border-box;
+      padding-top:     var(--margin-element);
+}
+
+.ui .container.param.compute-single > label
+{
+      margin-bottom: 0;
+}
+
+.ui .container.param .info-tooltip
+{
+      top: 7px;
+}
+
+.ui .container.empty-left
+{
+      flex: 1 1 75px;
+}
+
+.ui .container > label.random
+{
+      font-size: 14px;
+      margin-bottom:0;
+}
+
+.ui .container.compute
+{
+      font-size:        12px;
+      border-radius:    5px;
+      padding:          var(--margin-element);
+}
+
+.ui .container.compute.borders
+{
+      border:           1px solid grey;
+}
+
+
+.ui .container.compute .description
+{
+      font-size:        12px;
+      color:            rgba(255,255,255,0.6);
+      max-width:        260px;
+}
+
+
+/*
+-------------- UIInterpolation
+*/
+.container-interpolation-controls
+{
+      width:            100%;                  
+}
+
+/* 
+-------------- TOOLTIP / see ui-tooltip.css
+*/
+.ui .info-tooltip
+{
+      display:          inline-block;
+      color :           black;
+      background:       white;
+      box-sizing:       border-box;
+      border-radius:    50%;
+      width:            14px;
+      height:           14px;
+      font-size:        12px;
+      text-align:       center;
+      cursor:           pointer;
+}
+
+/* 
+-------------- TABLES (kind of)
+*/
+
+.ui .list-key-value
+{
+      display :         flex;
+}
+
+.ui .list-key-value > label
+{
+      flex :      1 50px;
+}
+
+.ui .list-key-value label:nth-child(2) 
+{
+      flex :      5;
+}
+
+/* 
+-------------- Container foldable
+*/
+
+.container.foldable > label
+{
+      cursor:     pointer;
+}
+
+.container-for-select
+{
+      padding: 10px 5px 10px 5px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 5px;
+}
+
+/* 
+-------------- Tab
+*/
+
+.container.tab 
+{
+      display:          flex;
+      gap:              2px;
+      padding:          4px;
+      border-radius:    4px;
+}
+
+.container.tab button
+{
+      flex:      1;
+}
+
+.container.tab.inside 
+{
+      padding:    0;      
+}
+
+/* 
+-------------- View SVG
+-------------- View HPGL
+*/
+.ui-view-svg,
+.ui-view-hpgl
+{
+      display:    flex;
+      position:   relative;
+      top:        0;
+      left:       0;
+      width:      100%;
+      height:     100%;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding:    1%;
+}
+
+.ui-view-svg .container-svg,
+.ui-view-hpgl .container-hpgl
+{
+      height:     100%;
+      width:      auto;      
+}
+
+.ui-view-svg svg,
+.ui-view-hpgl svg
+{
+      background-color:       white;
+      width:                  100%;
+      height:                 100%;
+}
+
+
+.container-hpgl .infos-svg
+{
+      position :              relative;
+      bottom:                 0;
+      left:                   0;
+      color:                  #000000;
+}
+
+.ui .slider-chk > label
+{
+      display:                inline-block;
+}
+
+.ui .container-slider-chk
+{
+      gap :                   10px;
+}
+
+
+.ui .container-slider-chk .range-container
+{
+      flex:                   5;
+}
+
+.ui .container-slider-chk .range-container input[type='range']
+{
+      margin:                 0;
+}
+
+
+.ui .container-slider-chk .checkbox-container
+{
+      align-items:            flex-start;
+}
+
+.lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+    .lds-ring div 
+    {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      top : 4px;
+      width: 20px;
+      height: 20px;
+      margin: 0px;
+      border: 4px solid white;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: white transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
