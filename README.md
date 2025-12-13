@@ -159,7 +159,7 @@ You can select an image by clicking on it. Selecting multiple images id done by 
 Several "hot keys" were defined to help setting score or deleting groups of images quickly : 
   * ```'a'``` selects all the images.
   * ```'d'``` deletes the selected images with a prior validation popup.
-  * ```'s'``` sets the score to 100 to the selecte images.
+  * ```'s'``` sets the score to 100 to the selected images.
 <img src="images/ParamExplorer_Gallery_w1024.jpg" height="auto" />
 
 ## In practice
