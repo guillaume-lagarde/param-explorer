@@ -9,8 +9,8 @@ from ..utils.sampler import (
 
 logger = logging.getLogger(__name__)
 
-AGENT_NAME = "open_ended"
-AGENT_MANUEL = "manual"
+AGENT_NAME = "open-ended"
+AGENT_MANUAL = "manual"
 
 
 class AgentOpenEnded:
@@ -144,9 +144,9 @@ class AgentOpenEnded:
             return
 
         agent_name = metadata.get("agent_name", "")
-        if agent_name not in {AGENT_NAME, AGENT_MANUEL}:
+        if agent_name not in {AGENT_NAME, AGENT_MANUAL}:
             logger.info(
-                f"AgentInfinite.update: agent_name '{agent_name}' not in {{{AGENT_NAME}, {AGENT_MANUEL}}}, skipping update"
+                f"AgentInfinite.update: agent_name '{agent_name}' not in {{{AGENT_NAME}, {AGENT_MANUAL}}}, skipping update"
             )
             return
 
@@ -163,7 +163,7 @@ class AgentOpenEnded:
             # Manual agent gets its own new population index
             pop_idx = self.population_size
 
-        if pop_idx == 0 or agent_name == AGENT_MANUEL:
+        if pop_idx == 0 or agent_name == AGENT_MANUAL:
             # Create a new population
             pop_idx = self.population_size
             self.population_size += 1
