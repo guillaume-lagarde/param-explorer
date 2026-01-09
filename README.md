@@ -1,6 +1,8 @@
 # ParamExplorer
 
-Authors: [Julien Gachadoat](https://www.v3ga.net/) and [Guillaume Lagarde](https://guillaume-lagarde.github.io/)
+Authors: [Julien Gachadoat](https://www.v3ga.net/) and [Guillaume Lagarde](https://guillaume-lagarde.github.io/).
+
+A companion paper is available [here](https://arxiv.org/abs/2512.16529).
 
 ## About ParamExplorer
 Generative art systems often involve high-dimensional and complex parameter spaces in which aesthetically compelling outputs occupy only small, fragmented regions. Because of this combinatorial explosion, artists typically rely on extensive manual trial-and-error, leaving many potentially interesting configurations undiscovered.
